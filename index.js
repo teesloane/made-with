@@ -1,28 +1,29 @@
 #!/usr/bin/env node
 
-// Phrase 1 data:
+var phrases = require("./phrases.json");
 
-const phraseSet1 = [
-  'a bottle of Jack',
-  'two thumbs up',
-  'a pile of garbage',
-  'love',
-  'great pain and anguish',
-  'small chips of wood',
-  'an ostrich feather',
-  'the saline liquids of the eye',
+var phrase = {
+  choose: function (ignorePhrase) {
+    var phrasesCopy = phrases.slice();
 
-];
+    if (ignorePhrase) {
+      phrasesCopy.splice(ignorePhrase.indexOf(ignorePhrase), 1)
+    }
 
-const phraseSet2 = [
-  'a winter cold',
-  'a giant sunflower',
-  'a cold shower'
-];
+    return phrasesCopy[Math.floor(Math.random() * phrasesCopy.length)];
+  },
 
-var phrase1 = phraseSet1[Math.floor(Math.random() * phraseSet1.length)];
-var phrase2 = phraseSet2[Math.floor(Math.random() * phraseSet2.length)];
+  build: function (first, second) {
+    return "Made with " + first + " and " + second + ".";
+  },
 
-// phrase 2 data:
+  format: function (phrase) {
+    return "\n\t" + phrase + "\n";
+  }
+}
 
-console.log(`\n\tMade with ${ phrase1 } and ${ phrase2 }.\n`);
+var phraseOne = phrase.choose();
+var phraseTwo = phrase.choose(phraseOne);
+var finalPhrase = phrase.build(phraseOne, phraseTwo);
+
+console.log(phrase.format(finalPhrase));
