@@ -11,11 +11,11 @@ var util = {
   },
 
   getRandomItem: function (arr, ignoreItem) {
-    var arrCopy = phrases.slice();
+    var arrCopy = arr.slice();
 
-    if (ignoreItem) arr.splice(ignoreItem.indexOf(ignoreItem), 1)
+    if (ignoreItem) arrCopy.splice(arrCopy.indexOf(ignoreItem), 1)
 
-    return arr[this.getRandomIndex(arr)];
+    return arrCopy[this.getRandomIndex(arrCopy)];
   }
 }
 
@@ -25,13 +25,14 @@ var phrase = {
   },
 
   build: function (first, second) {
-    return 'Made with ' + first + ' and ' + second + '.';
+    var firstStyle = util.getRandomItem(chalkStyles);
+    var secondStyle = util.getRandomItem(chalkStyles, firstStyle);
+
+    return 'Made with ' + chalk[firstStyle](first) + ' and ' + chalk[secondStyle](second) + '.';
   },
 
   format: function (phrase) {
-    var style = chalk[util.getRandomItem(chalkStyles)]
-
-    return style('\n\t' + phrase + '\n');
+    return '\n\t' + phrase + '\n';
   }
 }
 
