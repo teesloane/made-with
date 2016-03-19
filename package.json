@@ -1,0 +1,14 @@
+{
+  "name": "made-with",
+  "version": "0.0.1",
+  "description": "Made with ___ and ___",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyler + Bronek",
+  "license": "ISC",
+  "bin": {
+    "made-with": "./index.js"
+  }
+}
