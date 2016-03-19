@@ -8,6 +8,6 @@
 **Generate a random phrase:**
 `made-with`
 
-![](https://raw.githubusercontent.com/teesloane/made-with/master/screenshot.png)
+![](https://cloud.githubusercontent.com/assets/12987958/13900908/f2dcfa0a-ede7-11e5-9276-4540032b96b0.png)
 
 **Done!**
