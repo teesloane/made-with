@@ -4,11 +4,19 @@
   "description": "Made with ___ and ___",
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "made-with": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teesloane/made-width"
   },
   "author": "Tyler + Bronek",
   "license": "ISC",
-  "bin": {
-    "made-with": "./index.js"
+  "dependencies": {
+    "chalk": "^1.1.1"
   }
 }
