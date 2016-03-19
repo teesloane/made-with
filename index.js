@@ -10,20 +10,18 @@ var util = {
     return Math.floor(Math.random() * arr.length);
   },
 
-  getRandomItem: function (arr) {
+  getRandomItem: function (arr, ignoreItem) {
+    var arrCopy = phrases.slice();
+
+    if (ignoreItem) arr.splice(ignoreItem.indexOf(ignoreItem), 1)
+
     return arr[this.getRandomIndex(arr)];
   }
 }
 
 var phrase = {
   choose: function (ignorePhrase) {
-    var phrasesCopy = phrases.slice();
-
-    if (ignorePhrase) {
-      phrasesCopy.splice(ignorePhrase.indexOf(ignorePhrase), 1)
-    }
-
-    return phrasesCopy[util.getRandomIndex(phrasesCopy)];
+    return util.getRandomItem(phrases, ignorePhrase);
   },
 
   build: function (first, second) {
