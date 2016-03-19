@@ -33,7 +33,7 @@ var phrase = {
   format: function (phrase) {
     var style = chalk[util.getRandomItem(chalkStyles)]
 
-    return style('\n\n\t' + phrase + '\n');
+    return style('\n\t' + phrase + '\n');
   }
 }
 
