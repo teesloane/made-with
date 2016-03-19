@@ -10,4 +10,4 @@
 
 **Done!**
 
-![]screenshot.png
+![](screenshot.png)
