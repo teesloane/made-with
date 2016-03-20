@@ -42,11 +42,14 @@ var phrase = {
   }
 }
 
-var phraseOne = phrase.choose();
-var phraseTwo = phrase.choose(phraseOne);
-var finalPhrase = phrase.build(phraseOne, phraseTwo);
-var formattedPhrase = phrase.format(finalPhrase);
+function generatePhrase() {
+  var phraseOne = phrase.choose(),
+   phraseTwo = phrase.choose(phraseOne),
+   finalPhrase = phrase.build(phraseOne, phraseTwo);
 
-console.log(formattedPhrase);
+  return phrase.format(finalPhrase);
+}
 
-module.exports = formattedPhrase
+console.log(generatePhrase())
+
+exports.generatePhrase = generatePhrase;
