@@ -52,4 +52,6 @@ function generatePhrase() {
 
 console.log(generatePhrase())
 
+exports.util = util;
+exports.phrase = phrase;
 exports.generatePhrase = generatePhrase;
