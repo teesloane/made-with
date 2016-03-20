@@ -1,13 +1,15 @@
-## "Made-With": Generate your next cool tag line.
+## "Made-With"
+>Generating cool taglines for all the millenials out there. 
 
-`Made with Javascript and Love` is boring!
+_Made-With_ is a for-fun command-line tool. Globally install _Made-With_ and generare your next footer. No longer will `Made with Javascript and <3` dominate the footers of the internet.
 
 **Install**
+
 `npm install made-with -g`
 
 **Generate a random phrase:**
+
 `made-with`
 
-![](https://cloud.githubusercontent.com/assets/12987958/13900908/f2dcfa0a-ede7-11e5-9276-4540032b96b0.png)
+![](https://cloud.githubusercontent.com/assets/12987958/13902542/85e34662-ee22-11e5-8c3c-b49b27973d64.png)
 
-**Done!**
