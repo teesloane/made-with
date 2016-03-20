@@ -26,3 +26,14 @@ madeWith = require('made-with')
 console.log(madeWith.generatePhrase());
 // => "Made with HTML5 and ice cream.""
 ```
+
+### Development
+
+**Setup:**
+
+`npm install`
+
+This will install `mocha`, `chalk`, and any other dependencies local to this project.
+
+**Testing:**
+To run the tests in `./tests` directory, simply run `npm run test`.

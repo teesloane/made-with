@@ -8,5 +8,8 @@ describe('Util', function() {
     it('should return a single string', function () {
       assert.equal('A', util.getItem(phrases, 0));
     });
+    it('should not return the ignoreItem argument', function () {
+      assert.equal('B', util.getItem(phrases, 0, 'A'));
+    });
   });
 });
