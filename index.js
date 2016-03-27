@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var chalk = require('chalk')
+var chalk = require('chalk');
 
-var chalkStyles = require('./chalkStyles.json')
+var chalkStyles = require('./chalkStyles.json');
 var phrases = require('./phrases.json');
 
 var util = {
@@ -13,11 +13,13 @@ var util = {
   getRandomItem: function (arr, ignoreItem) {
     var arrCopy = arr.slice();
 
-    if (ignoreItem) arrCopy.splice(arrCopy.indexOf(ignoreItem), 1)
+    if (ignoreItem) {
+      arrCopy.splice(arrCopy.indexOf(ignoreItem), 1);
+    }
 
     return arrCopy[this.getRandomIndex(arrCopy)];
   }
-}
+};
 
 var phrase = {
   choose: function (ignorePhrase) {
@@ -33,12 +35,15 @@ var phrase = {
 
   format: function (phrase) {
     return '\n\t' + phrase + '\n';
+  },
+
+  get: function () {
+    var phraseOne = this.choose();
+    var phraseTwo = this.choose(phraseOne);
+    var finalPhrase = this.build(phraseOne, phraseTwo);
+
+    return this.format(finalPhrase);
   }
-}
+};
 
-var phraseOne = phrase.choose();
-var phraseTwo = phrase.choose(phraseOne);
-var finalPhrase = phrase.build(phraseOne, phraseTwo);
-var formattedPhrase = phrase.format(finalPhrase);
-
-console.log(formattedPhrase);
+module.exports = phrase.get.bind(phrase);
