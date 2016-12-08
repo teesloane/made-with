@@ -1,7 +1,7 @@
 ## "Made-With"
 >Generating cool taglines for all the millenials out there. 
 
-_Made-With_ is a for-fun command-line tool. Globally install _Made-With_ and generare your next footer. No longer will `Made with Javascript and <3` dominate the footers of the internet.
+Globally install _Made-With_ and generate your next footer. No longer will `Made with Javascript and <3` dominate the footers of the internet.
 
 **Install**
 
